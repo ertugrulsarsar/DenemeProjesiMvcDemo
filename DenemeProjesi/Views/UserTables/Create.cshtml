@@ -1,0 +1,326 @@
+﻿@model DenemeProjesi.Models.UserTable
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_BaseLayoutView.cshtml";
+}
+
+<Head>
+    <!--begin::Page Custom Styles(used by this page) -->
+    <link href="~/TemplateAssets/assets/css/demo1/pages/general/wizard/wizard-4.css" rel="stylesheet" type="text/css" />
+
+    <!--end::Page Custom Styles -->
+    <!--begin:: Global Mandatory Vendors -->
+    <link href="~/TemplateAssets/assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+</Head>
+
+@*@using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>UserTable</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.AvatarURL, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.AvatarURL, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.AvatarURL, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CompanyName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CompanyName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ContactPhone, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ContactPhone, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ContactPhone, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.EmailAddess, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.EmailAddess, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.EmailAddess, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CompanySite, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CompanySite, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CompanySite, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+
+    }*@
+
+
+<!-- begin:: Content Head -->
+<div class="kt-subheader   kt-grid__item" id="kt_subheader">
+    <div class="kt-subheader__main">
+        <h3 class="kt-subheader__title">
+            New User
+        </h3>
+        <span class="kt-subheader__separator kt-subheader__separator--v"></span>
+        <div class="kt-subheader__group" id="kt_subheader_search">
+            <span class="kt-subheader__desc" id="kt_subheader_total">
+                Enter user details and submit
+            </span>
+        </div>
+    </div>
+    <div class="kt-subheader__toolbar">
+        <a href="#" class="btn btn-default btn-bold">
+            Back
+        </a>
+        <div class="btn-group">
+            <button type="button" class="btn btn-brand btn-bold">
+                Submit
+            </button>
+            <button type="button" class="btn btn-brand btn-bold dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <ul class="kt-nav">
+                    <li class="kt-nav__item">
+                        <a href="#" class="kt-nav__link">
+                            <i class="kt-nav__link-icon flaticon2-writing"></i>
+                            <span class="kt-nav__link-text">Save &amp; continue</span>
+                        </a>
+                    </li>
+                    <li class="kt-nav__item">
+                        <a href="#" class="kt-nav__link">
+                            <i class="kt-nav__link-icon flaticon2-medical-records"></i>
+                            <span class="kt-nav__link-text">Save &amp; add new</span>
+                        </a>
+                    </li>
+                    <li class="kt-nav__item">
+                        <a href="#" class="kt-nav__link">
+                            <i class="kt-nav__link-icon flaticon2-hourglass-1"></i>
+                            <span class="kt-nav__link-text">Save &amp; exit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- end:: Content Head -->
+<!-- begin:: Content -->
+<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+    <div class="kt-wizard-v4" id="kt_apps_user_add_user" data-ktwizard-state="step-first">
+
+        <!--begin: Form Wizard Nav -->
+        <div class="kt-wizard-v4__nav">
+            <div class="kt-wizard-v4__nav-items nav">
+                <a class="kt-wizard-v4__nav-item nav-item" href="#" data-ktwizard-type="step" data-ktwizard-state="current">
+                    <div class="kt-wizard-v4__nav-body">
+                        <div class="kt-wizard-v4__nav-number">
+                            1
+                        </div>
+                        <div class="kt-wizard-v4__nav-label">
+                            <div class="kt-wizard-v4__nav-label-title">
+                                Profile
+                            </div>
+                            <div class="kt-wizard-v4__nav-label-desc">
+                                User's Personal Information
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="kt-wizard-v4__nav-item nav-item" href="#" data-ktwizard-type="step">
+                    <div class="kt-wizard-v4__nav-body">
+                        <div class="kt-wizard-v4__nav-number">
+                            2
+                        </div>
+                        <div class="kt-wizard-v4__nav-label">
+                            <div class="kt-wizard-v4__nav-label-title">
+                                Account
+                            </div>
+                            <div class="kt-wizard-v4__nav-label-desc">
+                                User's Account & Settings
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="kt-wizard-v4__nav-item nav-item" href="#" data-ktwizard-type="step">
+                    <div class="kt-wizard-v4__nav-body">
+                        <div class="kt-wizard-v4__nav-number">
+                            3
+                        </div>
+                        <div class="kt-wizard-v4__nav-label">
+                            <div class="kt-wizard-v4__nav-label-title">
+                                Address
+                            </div>
+                            <div class="kt-wizard-v4__nav-label-desc">
+                                User's Shipping Address
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="kt-wizard-v4__nav-item nav-item" href="#" data-ktwizard-type="step">
+                    <div class="kt-wizard-v4__nav-body">
+                        <div class="kt-wizard-v4__nav-number">
+                            4
+                        </div>
+                        <div class="kt-wizard-v4__nav-label">
+                            <div class="kt-wizard-v4__nav-label-title">
+                                Submission
+                            </div>
+                            <div class="kt-wizard-v4__nav-label-desc">
+                                Review and Submit
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!--end: Form Wizard Nav -->
+        <div class="kt-portlet">
+            <div class="kt-portlet__body kt-portlet__body--fit">
+                <div class="kt-grid">
+                    <div class="kt-grid__item kt-grid__item--fluid kt-wizard-v4__wrapper">
+
+                        <!--begin: Form Wizard Form-->
+                        <form class="kt-form" id="kt_apps_user_add_user_form">
+
+                            <!--begin: Form Wizard Step 1-->
+                            <div class="kt-wizard-v4__content" data-ktwizard-type="step-content" data-ktwizard-state="current">
+                                <div class="kt-heading kt-heading--md">User's Profile Details:</div>
+                                <div class="kt-section kt-section--first">
+                                    <div class="kt-wizard-v4__form">
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <div class="kt-section__body">
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">Avatar</label>
+                                                        <div class="col-lg-9 col-xl-6">
+                                                            <div class="kt-avatar kt-avatar--outline kt-avatar--circle" id="kt_apps_user_add_avatar">
+                                                                <div class="kt-avatar__holder" style="background-image: url(./assets/media/users/300_10.jpg)"></div>
+                                                                <label class="kt-avatar__upload" data-toggle="kt-tooltip" title="" data-original-title="Change avatar">
+                                                                    <i class="fa fa-pen"></i>
+                                                                    <input type="file" name="kt_apps_user_add_user_avatar">
+                                                                </label>
+                                                                <span class="kt-avatar__cancel" data-toggle="kt-tooltip" title="" data-original-title="Cancel avatar">
+                                                                    <i class="fa fa-times"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">First Name</label>
+                                                        <div class="col-lg-9 col-xl-9"> 
+                                                            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", Value = "Anna" } })
+                                                            @*<input class="form-control" type="text" value="Anna">*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">Last Name</label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control",Value="Erto" } })
+                                                            @*<input class="form-control" type="text" value="Krox">*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">Company Name</label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control",Value="Loop Inc.   " } })
+                                                            @*<input class="form-control" type="text" value="Loop Inc.">*@
+                                                            <span class="form-text text-muted">If you want your invoices addressed to a company. Leave blank to use your full name.</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">Contact Phone</label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend"><span class="input-group-text"><i class="la la-phone"></i></span></div>
+                                                                @Html.EditorFor(model => model.ContactPhone, new { htmlAttributes = new { @class = "form-control", @Value="+45678967456",@placeholder="Phone" } })
+                                                                @*<input type="text" class="form-control" value="+45678967456" placeholder="Phone" aria-describedby="basic-addon1">*@
+                                                            </div>
+                                                            <span class="form-text text-muted">We'll never share your email with anyone else.</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">Email Address</label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend"><span class="input-group-text"><i class="la la-at"></i></span></div>
+                                                                <input type="text" class="form-control" value="anna.krox@loop.com" placeholder="Email" aria-describedby="basic-addon1">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group form-group-last row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">Company Site</label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" placeholder="Username" value="loop">
+                                                                <div class="input-group-append"><span class="input-group-text">.com</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--end: Form Wizard Step 1-->
+                            <!--begin: Form Actions -->
+                            <div class="kt-form__actions">
+                                <div class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-prev">
+                                    Previous
+                                </div>
+                                <div class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-submit">
+                                    Submit
+                                </div>
+                                <div class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next">
+                                    Next Step
+                                </div>
+                            </div>
+
+                            <!--end: Form Actions -->
+                        </form>
+
+                        <!--end: Form Wizard Form-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- end:: Content -->
