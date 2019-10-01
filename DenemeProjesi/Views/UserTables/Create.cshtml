@@ -278,7 +278,8 @@
                                                         <div class="col-lg-9 col-xl-9">
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend"><span class="input-group-text"><i class="la la-at"></i></span></div>
-                                                                <input type="text" class="form-control" value="anna.krox@loop.com" placeholder="Email" aria-describedby="basic-addon1">
+                                                                @Html.EditorFor(model => model.EmailAddess, new { htmlAttributes = new { @class = "form-control",Value="anna.krox@loop.com" } })
+                                                                @*<input type="text" class="form-control" value="anna.krox@loop.com" placeholder="Email" aria-describedby="basic-addon1">*@
                                                             </div>
                                                         </div>
                                                     </div>
@@ -286,7 +287,8 @@
                                                         <label class="col-xl-3 col-lg-3 col-form-label">Company Site</label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <div class="input-group">
-                                                                <input type="text" class="form-control" placeholder="Username" value="loop">
+                                                                @Html.EditorFor(model => model.CompanySite, new { htmlAttributes = new { @class = "form-control",Value="loop" } })
+                                                                @*<input type="text" class="form-control" placeholder="Username" value="loop">*@
                                                                 <div class="input-group-append"><span class="input-group-text">.com</span></div>
                                                             </div>
                                                         </div>
@@ -311,7 +313,7 @@
                                     Next Step
                                 </div>
                             </div>
-
+                            
                             <!--end: Form Actions -->
                         </form>
 
