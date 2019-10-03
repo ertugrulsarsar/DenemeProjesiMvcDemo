@@ -123,5 +123,11 @@ namespace DenemeProjesi.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult ListUser()
+        {
+
+            return View();
+        }
     }
 }

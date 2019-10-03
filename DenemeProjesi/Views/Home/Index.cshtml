@@ -33,7 +33,8 @@
             <div class="col-xl-4">
 
                 <!--begin::Portlet-->
-                <div class="kt-portlet kt-portlet--solid-warning kt-portletk-portlet--height-fluid">
+                <div 
+                     class="kt-portlet kt-portlet--solid-warning kt-portletk-portlet--height-fluid">
                     <div class="kt-portlet__head">
                         <div class="kt-portlet__head-label">
                             <span class="kt-portlet__head-icon"><i class="flaticon-stopwatch"></i></span>
@@ -49,7 +50,7 @@
                         </div>
                     </div>
                     <div class="kt-portlet__foot kt-portlet__foot--sm kt-align-right">
-                        <a href="~/Views/Shared/_BaseLayoutView.cshtml" class="btn btn-font-light btn-outline-hover-light">Save</a>
+                        <a href="@Url.Action("ListUser","UserTables")" class="btn btn-font-light btn-outline-hover-light">Go UserList</a>
                         <a href="~/Views/Shared/_BaseLayoutView.cshtml" class="btn btn-font-light btn-outline-hover-light">Cancel</a>
                     </div>
                 </div>

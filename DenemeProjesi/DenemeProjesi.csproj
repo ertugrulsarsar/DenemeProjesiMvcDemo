@@ -18,8 +18,8 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44361</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
@@ -5592,6 +5592,7 @@
     <Content Include="TemplateAssets\assets\vendors\general\waypoints\test\waypoint-spec.js" />
     <Content Include="TemplateAssets\assets\vendors\general\wnumb\test.html" />
     <Content Include="TemplateAssets\assets\vendors\general\wnumb\wNumb.js" />
+    <None Include="Views\UserTables\ListUser.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
