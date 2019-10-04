@@ -4,8 +4,30 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="18ce94e7c76e42bd8cdf0baa5238a16e" Name="Diagram1">
-        <EntityTypeShape EntityType="MVCDemoModel.UserTable" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="604be6f2f1f0423cb07c0aa26bf40039" Name="Diagram1" ZoomLevel="108">
+        <EntityTypeShape EntityType="NORTHWNDModel.Categories" Width="1.5" PointX="3" PointY="14.5" />
+        <EntityTypeShape EntityType="NORTHWNDModel.CustomerDemographics" Width="1.5" PointX="0.75" PointY="2.5" />
+        <EntityTypeShape EntityType="NORTHWNDModel.Customers" Width="1.5" PointX="3" PointY="1.5" />
+        <EntityTypeShape EntityType="NORTHWNDModel.Employees" Width="1.5" PointX="3" PointY="8.375" />
+        <EntityTypeShape EntityType="NORTHWNDModel.Order_Details" Width="1.5" PointX="7.5" PointY="2.125" />
+        <EntityTypeShape EntityType="NORTHWNDModel.Orders" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="NORTHWNDModel.Products" Width="1.5" PointX="5.25" PointY="15.875" />
+        <EntityTypeShape EntityType="NORTHWNDModel.Region" Width="1.5" PointX="5.75" PointY="7.125" />
+        <EntityTypeShape EntityType="NORTHWNDModel.Shippers" Width="1.5" PointX="3" PointY="5.875" />
+        <EntityTypeShape EntityType="NORTHWNDModel.Suppliers" Width="1.5" PointX="3" PointY="17.25" />
+        <EntityTypeShape EntityType="NORTHWNDModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="5.75" />
+        <EntityTypeShape EntityType="NORTHWNDModel.Territories" Width="1.5" PointX="8" PointY="9.375" />
+        <AssociationConnector Association="NORTHWNDModel.FK_Products_Categories" />
+        <AssociationConnector Association="NORTHWNDModel.FK_Orders_Customers" />
+        <AssociationConnector Association="NORTHWNDModel.FK_Employees_Employees" />
+        <AssociationConnector Association="NORTHWNDModel.FK_Orders_Employees" />
+        <AssociationConnector Association="NORTHWNDModel.FK_Order_Details_Orders" />
+        <AssociationConnector Association="NORTHWNDModel.FK_Order_Details_Products" />
+        <AssociationConnector Association="NORTHWNDModel.FK_Orders_Shippers" />
+        <AssociationConnector Association="NORTHWNDModel.FK_Products_Suppliers" />
+        <AssociationConnector Association="NORTHWNDModel.FK_Territories_Region" />
+        <AssociationConnector Association="NORTHWNDModel.CustomerCustomerDemo" />
+        <AssociationConnector Association="NORTHWNDModel.EmployeeTerritories" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

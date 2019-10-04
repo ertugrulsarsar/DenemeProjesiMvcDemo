@@ -13,10 +13,10 @@ namespace DenemeProjesi.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MVCDemoEntities : DbContext
+    public partial class NORTHWNDEntities : DbContext
     {
-        public MVCDemoEntities()
-            : base("name=MVCDemoEntities")
+        public NORTHWNDEntities()
+            : base("name=NORTHWNDEntities")
         {
         }
     
@@ -25,6 +25,17 @@ namespace DenemeProjesi.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<UserTable> UserTable { get; set; }
+        public virtual DbSet<Categories> Categories { get; set; }
+        public virtual DbSet<CustomerDemographics> CustomerDemographics { get; set; }
+        public virtual DbSet<Customers> Customers { get; set; }
+        public virtual DbSet<Employees> Employees { get; set; }
+        public virtual DbSet<Order_Details> Order_Details { get; set; }
+        public virtual DbSet<Orders> Orders { get; set; }
+        public virtual DbSet<Products> Products { get; set; }
+        public virtual DbSet<Region> Region { get; set; }
+        public virtual DbSet<Shippers> Shippers { get; set; }
+        public virtual DbSet<Suppliers> Suppliers { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Territories> Territories { get; set; }
     }
 }
